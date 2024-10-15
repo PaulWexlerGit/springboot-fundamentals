@@ -27,30 +27,35 @@ This project is a Spring Boot application that demonstrates the fundamentals of 
     │   │                   │   ├───controller
     │   │                   │   ├───dto
     │   │                   │   ├───entity
+    │   │                   │   ├───mapper
     │   │                   │   ├───repository
     │   │                   │   └───service
     │   │                   ├───artist
     │   │                   │   ├───controller
     │   │                   │   ├───dto
     │   │                   │   ├───entity
+    │   │                   │   ├───mapper
     │   │                   │   ├───repository
     │   │                   │   └───service
     │   │                   ├───genre
     │   │                   │   ├───controller
     │   │                   │   ├───dto
     │   │                   │   ├───entity
+    │   │                   │   ├───mapper
     │   │                   │   ├───repository
     │   │                   │   └───service
     │   │                   ├───playlist
     │   │                   │   ├───controller
     │   │                   │   ├───dto
     │   │                   │   ├───entity
+    │   │                   │   ├───mapper
     │   │                   │   ├───repository
     │   │                   │   └───service
     │   │                   └───song
     │   │                       ├───controller
     │   │                       ├───dto
     │   │                       ├───entity
+    │   │                       ├───mapper
     │   │                       ├───repository
     │   │                       └───service
     │   └───resources
