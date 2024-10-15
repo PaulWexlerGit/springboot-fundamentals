@@ -60,13 +60,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Dependency for Project Lombok, which provides annotations to reduce boilerplate code -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <!-- Dependency for Spring Boot's test starter, which includes testing libraries like JUnit, Hamcrest, and Mockito -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
