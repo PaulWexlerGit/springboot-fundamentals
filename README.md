@@ -7,3 +7,77 @@
 ![Validation](https://img.shields.io/badge/Validation-2.0.1.Final-green)
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
+
+## Description
+
+This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It includes the following modules:
+
+
+## Project structure
+
+```
+────src
+    ├───main
+    │   ├───java
+    │   │   └───com
+    │   │       └───example
+    │   │           └───pablomesaspringbootfundamentals
+    │   │               └───modules
+    │   │                   ├───album
+    │   │                   │   ├───controller
+    │   │                   │   ├───dto
+    │   │                   │   ├───entity
+    │   │                   │   ├───repository
+    │   │                   │   └───service
+    │   │                   ├───artist
+    │   │                   │   ├───controller
+    │   │                   │   ├───dto
+    │   │                   │   ├───entity
+    │   │                   │   ├───repository
+    │   │                   │   └───service
+    │   │                   ├───genre
+    │   │                   │   ├───controller
+    │   │                   │   ├───dto
+    │   │                   │   ├───entity
+    │   │                   │   ├───repository
+    │   │                   │   └───service
+    │   │                   ├───playlist
+    │   │                   │   ├───controller
+    │   │                   │   ├───dto
+    │   │                   │   ├───entity
+    │   │                   │   ├───repository
+    │   │                   │   └───service
+    │   │                   └───song
+    │   │                       ├───controller
+    │   │                       ├───dto
+    │   │                       ├───entity
+    │   │                       ├───repository
+    │   │                       └───service
+    │   └───resources
+    └───test
+        └───java
+            └───com
+                └───example
+                    └───pablomesaspringbootfundamentals
+```
+
+
+## Technologies Used
+
+- **Java 17**
+- **Spring Boot 3.3.4**
+- **Maven 3.8.4**
+- **H2 Database 2.3.232**
+- **Spring Boot Starter Web**
+- **Spring Boot Starter Validation**
+- **Spring Boot Starter Data JPA**
+- **Lombok 1.18.34**
+- **MapStruct 1.5.5.Final**
+
+## Getting Started
+
+To run the application, use the following command:
+
+```bash
+mvn spring-boot:run
+```
