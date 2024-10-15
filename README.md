@@ -10,8 +10,8 @@
 
 ## Description
 
-This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It includes the following modules:
-
+This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It
+includes the following modules:
 
 ## Project structure
 
@@ -66,7 +66,6 @@ This project is a Spring Boot application that demonstrates the fundamentals of 
                     └───pablomesaspringbootfundamentals
 ```
 
-
 ## Technologies Used
 
 - **Java 17**
@@ -86,3 +85,18 @@ To run the application, use the following command:
 ```bash
 mvn spring-boot:run
 ```
+
+## Connecting to the H2 Database
+
+To connect to the H2 database through the H2 console, follow these steps:
+
+1. Start the application using the command mentioned above.
+2. Open your web browser and navigate to http://localhost:8090/h2-console.
+3. Use the following settings to connect:
+
+- JDBC URL: jdbc:h2:file:./data/music_management
+- Username: Nter
+- Password: 1234
+
+The database file is located at [./data/music_management](./data/music_management) relative to the project root
+directory.
