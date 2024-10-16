@@ -4,14 +4,15 @@ import com.example.pablomesaspringbootfundamentals.modules.artist.dto.ArtistInpu
 import com.example.pablomesaspringbootfundamentals.modules.artist.dto.ArtistOutputDTO;
 import com.example.pablomesaspringbootfundamentals.modules.artist.entity.Artist;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring")
+import java.util.List;
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface ArtistMapper {
+    Artist toEntity(ArtistInputDTO artistInputDTO);
 
-    @Mapping(source = "genre.id", target = "genreId")
     ArtistOutputDTO toOutputDTO(Artist artist);
 
-    @Mapping(source = "genreId", target = "genre.id")
-    Artist toEntity(ArtistInputDTO artistInputDTO);
+    List<ArtistOutputDTO> toOutputDTOs(List<Artist> artists);
 }

@@ -1,9 +1,8 @@
+// GenreInputDTO.java
 package com.example.pablomesaspringbootfundamentals.modules.genre.dto;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -11,8 +10,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class GenreInputDTO {
-    @NotNull(message = "Release date is mandatory")
-    private LocalDate releaseDate;
+    @NotBlank(message = "Name is mandatory")
+    private String name;
 
     private String description;
 }

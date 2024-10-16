@@ -4,14 +4,18 @@ import com.example.pablomesaspringbootfundamentals.modules.album.dto.AlbumInputD
 import com.example.pablomesaspringbootfundamentals.modules.album.dto.AlbumOutputDTO;
 import com.example.pablomesaspringbootfundamentals.modules.album.entity.Album;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.ReportingPolicy;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
+import java.util.List;
+
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Component
 public interface AlbumMapper {
+    Album toEntity(AlbumInputDTO albumInputDTO);
 
-    @Mapping(source = "artist.id", target = "artistId")
     AlbumOutputDTO toOutputDTO(Album album);
 
-    @Mapping(source = "artistId", target = "artist.id")
-    Album toEntity(AlbumInputDTO albumInputDTO);
+    List<AlbumOutputDTO> toOutputDTOs(List<Album> albums);
 }
