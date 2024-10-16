@@ -2,8 +2,10 @@ package com.example.pablomesaspringbootfundamentals.modules.genre.entity;
 
 import com.example.pablomesaspringbootfundamentals.modules.artist.entity.Artist;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -19,7 +21,9 @@ public class Genre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    @NotNull(message = "Release date is mandatory")
+    private LocalDate releaseDate;
+
     private String description;
 
     @OneToMany(mappedBy = "genre")

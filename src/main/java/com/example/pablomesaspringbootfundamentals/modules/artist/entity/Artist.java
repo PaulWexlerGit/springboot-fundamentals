@@ -3,6 +3,7 @@ package com.example.pablomesaspringbootfundamentals.modules.artist.entity;
 import com.example.pablomesaspringbootfundamentals.modules.album.entity.Album;
 import com.example.pablomesaspringbootfundamentals.modules.genre.entity.Genre;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class Artist {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name is mandatory")
     private String name;
 
     @ManyToOne
