@@ -100,3 +100,11 @@ To connect to the H2 database through the H2 console, follow these steps:
 
 The database file is located at [./data/music_management](./data/music_management) relative to the project root
 directory.
+
+
+### Accessing Swagger UI
+
+Once the application is running, you can access the Swagger UI at the following URL:
+
+
+http://localhost:8090/swagger-ui/index.html
