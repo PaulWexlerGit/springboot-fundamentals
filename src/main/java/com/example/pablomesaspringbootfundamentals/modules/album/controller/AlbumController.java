@@ -19,30 +19,61 @@ public class AlbumController {
 
     private final AlbumService albumService;
 
-    @PostMapping
-    public ResponseEntity<AlbumOutputDTO> createAlbum(@Valid @RequestBody AlbumInputDTO albumInputDTO) {
-        return new ResponseEntity<>(albumService.createAlbum(albumInputDTO), HttpStatus.CREATED);
-    }
+/**
+ * Creates a new album.
+ *
+ * @param albumInputDTO the album input data transfer object containing the details of the album to be created
+ * @return a ResponseEntity containing the created album output data transfer object and the HTTP status code CREATED
+ */
+@PostMapping
+public ResponseEntity<AlbumOutputDTO> createAlbum(@Valid @RequestBody AlbumInputDTO albumInputDTO) {
+    return new ResponseEntity<>(albumService.createAlbum(albumInputDTO), HttpStatus.CREATED);
+}
 
-    @GetMapping
-    public ResponseEntity<List<AlbumOutputDTO>> getAllAlbums() {
-        return ResponseEntity.ok(albumService.getAllAlbums());
-    }
+/**
+ * Retrieves all albums.
+ *
+ * @return a ResponseEntity containing a list of all album output data transfer objects and the HTTP status code OK
+ */
+@GetMapping
+public ResponseEntity<List<AlbumOutputDTO>> getAllAlbums() {
+    return ResponseEntity.ok(albumService.getAllAlbums());
+}
 
-    @GetMapping("/{id}")
-    public ResponseEntity<AlbumOutputDTO> getAlbumById(@PathVariable Long id) {
-        return ResponseEntity.ok(albumService.getAlbumById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Album not found with id " + id)));
-    }
+/**
+ * Retrieves an album by its ID.
+ *
+ * @param id the ID of the album to be retrieved
+ * @return a ResponseEntity containing the album output data transfer object and the HTTP status code OK
+ * @throws ResourceNotFoundException if the album with the specified ID is not found
+ */
+@GetMapping("/{id}")
+public ResponseEntity<AlbumOutputDTO> getAlbumById(@PathVariable Long id) {
+    return ResponseEntity.ok(albumService.getAlbumById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Album not found with id " + id)));
+}
 
-    @PutMapping("/{id}")
-    public ResponseEntity<AlbumOutputDTO> updateAlbum(@PathVariable Long id, @Valid @RequestBody AlbumInputDTO albumInputDTO) {
-        return ResponseEntity.ok(albumService.updateAlbum(id, albumInputDTO));
-    }
+/**
+ * Updates an existing album.
+ *
+ * @param id the ID of the album to be updated
+ * @param albumInputDTO the album input data transfer object containing the updated details of the album
+ * @return a ResponseEntity containing the updated album output data transfer object and the HTTP status code OK
+ */
+@PutMapping("/{id}")
+public ResponseEntity<AlbumOutputDTO> updateAlbum(@PathVariable Long id, @Valid @RequestBody AlbumInputDTO albumInputDTO) {
+    return ResponseEntity.ok(albumService.updateAlbum(id, albumInputDTO));
+}
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteAlbum(@PathVariable Long id) {
-        albumService.deleteAlbum(id);
-        return ResponseEntity.noContent().build();
-    }
+/**
+ * Deletes an album by its ID.
+ *
+ * @param id the ID of the album to be deleted
+ * @return a ResponseEntity with no content and the HTTP status code NO_CONTENT
+ */
+@DeleteMapping("/{id}")
+public ResponseEntity<Void> deleteAlbum(@PathVariable Long id) {
+    albumService.deleteAlbum(id);
+    return ResponseEntity.noContent().build();
+}
 }
