@@ -4,9 +4,10 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.4-6DB33F?logo=spring-boot)
 ![Maven](https://img.shields.io/badge/Maven-3.8.4-purple?logo=apache-maven&logoColor=orange)
 ![H2](https://img.shields.io/badge/H2-2.3.232-007396)
-![Validation](https://img.shields.io/badge/Validation-2.0.1.Final-green)
+![Validation](https://img.shields.io/badge/Validation-2.0.1.Final-85EA2D)
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
+![Swagger](https://img.shields.io/badge/Swagger-2.6.0-85EA2D?logo=swagger)
 
 ## Description
 
@@ -77,6 +78,7 @@ includes the following modules:
 - **Spring Boot Starter Data JPA**
 - **Lombok 1.18.34**
 - **MapStruct 1.5.5.Final**
+- **Swagger 2.6.0**
 
 ## Getting Started
 
@@ -104,7 +106,5 @@ directory.
 
 ### Accessing Swagger UI
 
-Once the application is running, you can access the Swagger UI at the following URL:
-
-
+Once the application is running, you can access the Swagger UI at the following URL: 
 http://localhost:8090/swagger-ui/index.html
