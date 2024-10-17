@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS song
 (
     255
 ) NOT NULL,
-    duration TIME,
+    duration BIGINT, -- Changed from TIME to BIGINT to store duration in nanoseconds
     album_id BIGINT,
     created_at TIMESTAMP,
     FOREIGN KEY

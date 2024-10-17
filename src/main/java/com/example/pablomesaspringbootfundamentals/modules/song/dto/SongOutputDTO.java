@@ -2,8 +2,6 @@ package com.example.pablomesaspringbootfundamentals.modules.song.dto;
 
 import lombok.*;
 
-import java.time.Duration;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,6 +10,6 @@ import java.time.Duration;
 public class SongOutputDTO {
     private Long id;
     private String name;
-    private Duration duration;
+    private String duration;
     private Long albumId;
 }
