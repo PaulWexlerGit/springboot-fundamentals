@@ -60,7 +60,7 @@ public class SongController {
     /**
      * Updates an existing song.
      *
-     * @param id the ID of the song to be updated
+     * @param id           the ID of the song to be updated
      * @param songInputDTO the song input data transfer object containing the updated details of the song
      * @return a ResponseEntity containing the updated song output data transfer object and the HTTP status code OK
      */

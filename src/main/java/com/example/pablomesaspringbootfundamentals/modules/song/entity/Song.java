@@ -29,10 +29,10 @@ public class Song {
     @NotNull(message = "Duration is mandatory")
     private Duration duration;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "album_id")
     private Album album;
 
-    @ManyToMany(mappedBy = "songs")
+    @ManyToMany(mappedBy = "songs", cascade = CascadeType.REMOVE)
     private List<Playlist> playlists;
 }

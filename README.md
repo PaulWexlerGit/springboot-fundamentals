@@ -18,54 +18,61 @@ includes the following modules:
 
 ```
 ────src
-    ├───main
-    │   ├───java
-    │   │   └───com
-    │   │       └───example
-    │   │           └───pablomesaspringbootfundamentals
-    │   │               └───modules
-    │   │                   ├───album
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───artist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───genre
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───playlist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   └───song
-    │   │                       ├───controller
-    │   │                       ├───dto
-    │   │                       ├───entity
-    │   │                       ├───mapper
-    │   │                       ├───repository
-    │   │                       └───service
-    │   └───resources
-    └───test
-        └───java
-            └───com
-                └───example
-                    └───pablomesaspringbootfundamentals
-```
+   ├───main
+   │   ├───java
+   │   │   └───com
+   │   │       └───example
+   │   │           └───pablomesaspringbootfundamentals
+   │   │               ├───config
+   │   │               ├───exception
+   │   │               └───modules
+   │   │                   ├───album
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───artist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───genre
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───playlist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   └───song
+   │   │                       ├───controller
+   │   │                       ├───dto
+   │   │                       ├───entity
+   │   │                       ├───mapper
+   │   │                       ├───repository
+   │   │                       └───service
+   │   │                           └───impl
+   │   └───resources
+   └───test
+       └───java
+           └───com
+               └───example
+                   └───pablomesaspringbootfundamentals
+   ```
 
 ## Technologies Used
 
@@ -79,6 +86,45 @@ includes the following modules:
 - **Lombok 1.18.34**
 - **MapStruct 1.5.5.Final**
 - **Swagger 2.6.0**
+
+## Entity-Relationship Diagram (ERD) ![Mermaid](https://img.shields.io/badge/Mermaid-white?logo=mermaid)
+
+```mermaid
+erDiagram
+    GENRE ||--o{ ARTIST : "has"
+    ARTIST ||--o{ ALBUM : "creates"
+    ALBUM ||--o{ SONG : "contains"
+    SONG }o--o{ PLAYLIST : "belongs to"
+    
+    GENRE {
+        Long id PK
+        String name
+        String description
+    }
+    ARTIST {
+        Long id PK
+        String name
+        Long genre_id FK
+    }
+    ALBUM {
+        Long id PK
+        String name
+        LocalDate releaseDate
+        Long artist_id FK
+    }
+    SONG {
+        Long id PK
+        String name
+        Duration duration
+        Long album_id FK
+    }
+    PLAYLIST {
+        Long id PK
+        String name
+        String description
+    }
+```
+
 
 ## Getting Started
 
@@ -103,8 +149,38 @@ To connect to the H2 database through the H2 console, follow these steps:
 The database file is located at [./data/music_management](./data/music_management) relative to the project root
 directory.
 
-
 ### Accessing Swagger UI
 
-Once the application is running, you can access the Swagger UI at the following URL: 
+Once the application is running, you can access the Swagger UI at the following URL:
 http://localhost:8090/swagger-ui/index.html
+
+
+## Postman Collection ![Postman](https://img.shields.io/badge/Postman-white?logo=postman)
+
+The project includes a Postman collection for testing the API endpoints. You can find the collection file at the following path:
+
+`src/main/java/com/example/pablomesaspringbootfundamentals/Music Management API.postman_collection.json`
+
+To import the collection into Postman:
+
+1. Open Postman.
+2. Click on the `Import` button.
+3. Select the `File` tab.
+4. Click on `Choose Files` and navigate to the path mentioned above.
+5. Select the `Music Management API.postman_collection.json` file and click `Open`.
+
+This will import all the API endpoints into Postman, allowing you to test the API easily.
+
+
+## Acknowledgements
+
+Special thanks to [sergio.fuentes@nter.es](mailto:) for his invaluable support and guidance during my training period.
+
+## Contact
+For any inquiries or feedback, please contact:
+
+Pablo José Mesa Pérez
+
+[pablo.mesa@nter.es](mailto:)
+
+[Nter](https://www.nter.es)

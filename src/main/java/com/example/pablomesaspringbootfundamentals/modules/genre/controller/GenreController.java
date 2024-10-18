@@ -60,7 +60,7 @@ public class GenreController {
     /**
      * Updates an existing genre.
      *
-     * @param id the ID of the genre to be updated
+     * @param id            the ID of the genre to be updated
      * @param genreInputDTO the genre input data transfer object containing the updated details of the genre
      * @return a ResponseEntity containing the updated genre output data transfer object and the HTTP status code OK
      */
