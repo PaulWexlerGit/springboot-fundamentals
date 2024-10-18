@@ -8,7 +8,6 @@
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
 ![Swagger](https://img.shields.io/badge/Swagger-2.6.0-85EA2D?logo=swagger)
-![Mermaid](https://img.shields.io/badge/Mermaid-white?logo=mermaid)
 ## Description
 
 This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It
@@ -88,7 +87,7 @@ includes the following modules:
 - **MapStruct 1.5.5.Final**
 - **Swagger 2.6.0**
 
-## Entity-Relationship Diagram (ERD)
+## Entity-Relationship Diagram (ERD) ![Mermaid](https://img.shields.io/badge/Mermaid-white?logo=mermaid)
 
 ```mermaid
 erDiagram
