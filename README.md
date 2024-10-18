@@ -8,7 +8,7 @@
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
 ![Swagger](https://img.shields.io/badge/Swagger-2.6.0-85EA2D?logo=swagger)
-
+![Mermaid](https://img.shields.io/badge/Mermaid-white?logo=mermaid)
 ## Description
 
 This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It
@@ -18,54 +18,62 @@ includes the following modules:
 
 ```
 ────src
-    ├───main
-    │   ├───java
-    │   │   └───com
-    │   │       └───example
-    │   │           └───pablomesaspringbootfundamentals
-    │   │               └───modules
-    │   │                   ├───album
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───artist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───genre
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───playlist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   └───song
-    │   │                       ├───controller
-    │   │                       ├───dto
-    │   │                       ├───entity
-    │   │                       ├───mapper
-    │   │                       ├───repository
-    │   │                       └───service
-    │   └───resources
-    └───test
-        └───java
-            └───com
-                └───example
-                    └───pablomesaspringbootfundamentals
-```
+   ├───main
+   │   ├───java
+   │   │   └───com
+   │   │       └───example
+   │   │           └───pablomesaspringbootfundamentals
+   │   │               ├───config
+   │   │               ├───exception
+   │   │               └───modules
+   │   │                   ├───album
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───artist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───genre
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───playlist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   └───song
+   │   │                       ├───controller
+   │   │                       ├───dto
+   │   │                       ├───entity
+   │   │                       ├───mapper
+   │   │                       ├───repository
+   │   │                       └───service
+   │   │                           └───impl
+   │   └───resources
+   └───test
+       └───java
+           └───com
+               └───example
+                   └───pablomesaspringbootfundamentals
+   ```
+
 
 ## Technologies Used
 
