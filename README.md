@@ -80,6 +80,44 @@ includes the following modules:
 - **MapStruct 1.5.5.Final**
 - **Swagger 2.6.0**
 
+## Entity-Relationship Diagram (ERD)
+
+```mermaid
+erDiagram
+    GENRE ||--o{ ARTIST : "has"
+    ARTIST ||--o{ ALBUM : "creates"
+    ALBUM ||--o{ SONG : "contains"
+    SONG }o--o{ PLAYLIST : "belongs to"
+    
+    GENRE {
+        Long id PK
+        String name
+        String description
+    }
+    ARTIST {
+        Long id PK
+        String name
+        Long genre_id FK
+    }
+    ALBUM {
+        Long id PK
+        String name
+        LocalDate releaseDate
+        Long artist_id FK
+    }
+    SONG {
+        Long id PK
+        String name
+        Duration duration
+        Long album_id FK
+    }
+    PLAYLIST {
+        Long id PK
+        String name
+        String description
+    }
+```
+
 ## Getting Started
 
 To run the application, use the following command:

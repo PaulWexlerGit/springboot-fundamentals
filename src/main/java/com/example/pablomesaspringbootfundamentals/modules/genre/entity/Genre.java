@@ -25,6 +25,6 @@ public class Genre {
 
     private String description;
 
-    @OneToMany(mappedBy = "genre")
+    @OneToMany(mappedBy = "genre", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Artist> artists;
 }
