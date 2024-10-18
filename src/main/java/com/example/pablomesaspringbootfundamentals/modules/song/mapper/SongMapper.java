@@ -30,23 +30,23 @@ public interface SongMapper {
         }
     }
 
-/**
- * Converts a String representation of a Duration to a Duration object.
- *
- * @param value the String representation of the Duration
- * @return the Duration object
- */
-default Duration map(String value) {
-    return Duration.parse(value);
-}
+    /**
+     * Converts a String representation of a Duration to a Duration object.
+     *
+     * @param value the String representation of the Duration
+     * @return the Duration object
+     */
+    default Duration map(String value) {
+        return Duration.parse(value);
+    }
 
-/**
- * Converts a Duration object to its String representation.
- *
- * @param value the Duration object
- * @return the String representation of the Duration
- */
-default String map(Duration value) {
-    return value.toString();
-}
+    /**
+     * Converts a Duration object to its String representation.
+     *
+     * @param value the Duration object
+     * @return the String representation of the Duration
+     */
+    default String map(Duration value) {
+        return value.toString();
+    }
 }

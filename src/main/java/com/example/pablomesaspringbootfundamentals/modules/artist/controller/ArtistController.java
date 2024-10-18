@@ -60,7 +60,7 @@ public class ArtistController {
     /**
      * Updates an existing artist.
      *
-     * @param id the ID of the artist to be updated
+     * @param id             the ID of the artist to be updated
      * @param artistInputDTO the artist input data transfer object containing the updated details of the artist
      * @return a ResponseEntity containing the updated artist output data transfer object and the HTTP status code OK
      */

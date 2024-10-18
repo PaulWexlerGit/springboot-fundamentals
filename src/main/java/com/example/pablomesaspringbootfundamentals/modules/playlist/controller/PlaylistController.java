@@ -60,7 +60,7 @@ public class PlaylistController {
     /**
      * Updates an existing playlist.
      *
-     * @param id the ID of the playlist to be updated
+     * @param id               the ID of the playlist to be updated
      * @param playlistInputDTO the playlist input data transfer object containing the updated details of the playlist
      * @return a ResponseEntity containing the updated playlist output data transfer object and the HTTP status code OK
      */

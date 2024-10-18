@@ -69,14 +69,11 @@ public class SongServiceImpl implements SongService {
         Song song = songRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Song not found with id " + id));
 
-        // Remove the song from all playlists
         List<Playlist> playlists = playlistRepository.findBySongsContaining(song);
         for (Playlist playlist : playlists) {
             playlist.getSongs().remove(song);
             playlistRepository.save(playlist);
         }
-
-        // Now delete the song
         songRepository.delete(song);
     }
 }

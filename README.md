@@ -8,6 +8,7 @@
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
 ![Swagger](https://img.shields.io/badge/Swagger-2.6.0-85EA2D?logo=swagger)
+
 ## Description
 
 This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It
@@ -73,7 +74,6 @@ includes the following modules:
                    └───pablomesaspringbootfundamentals
    ```
 
-
 ## Technologies Used
 
 - **Java 17**
@@ -125,6 +125,7 @@ erDiagram
     }
 ```
 
+
 ## Getting Started
 
 To run the application, use the following command:
@@ -148,8 +149,38 @@ To connect to the H2 database through the H2 console, follow these steps:
 The database file is located at [./data/music_management](./data/music_management) relative to the project root
 directory.
 
-
 ### Accessing Swagger UI
 
-Once the application is running, you can access the Swagger UI at the following URL: 
+Once the application is running, you can access the Swagger UI at the following URL:
 http://localhost:8090/swagger-ui/index.html
+
+
+## Postman Collection ![Postman](https://img.shields.io/badge/Postman-white?logo=postman)
+
+The project includes a Postman collection for testing the API endpoints. You can find the collection file at the following path:
+
+`src/main/java/com/example/pablomesaspringbootfundamentals/Music Management API.postman_collection.json`
+
+To import the collection into Postman:
+
+1. Open Postman.
+2. Click on the `Import` button.
+3. Select the `File` tab.
+4. Click on `Choose Files` and navigate to the path mentioned above.
+5. Select the `Music Management API.postman_collection.json` file and click `Open`.
+
+This will import all the API endpoints into Postman, allowing you to test the API easily.
+
+
+## Acknowledgements
+
+Special thanks to [sergio.fuentes@nter.es](mailto:) for his invaluable support and guidance during my training period.
+
+## Contact
+For any inquiries or feedback, please contact:
+
+Pablo José Mesa Pérez
+
+[pablo.mesa@nter.es](mailto:)
+
+[Nter](https://www.nter.es)
