@@ -8,7 +8,6 @@
 ![MapStruct](https://img.shields.io/badge/MapStruct-1.5.5.Final-orange)
 ![Lombok](https://img.shields.io/badge/Lombok-1.18.34-f80000)
 ![Swagger](https://img.shields.io/badge/Swagger-2.6.0-85EA2D?logo=swagger)
-
 ## Description
 
 This project is a Spring Boot application that demonstrates the fundamentals of Spring Boot with a modular structure. It
@@ -18,54 +17,62 @@ includes the following modules:
 
 ```
 ────src
-    ├───main
-    │   ├───java
-    │   │   └───com
-    │   │       └───example
-    │   │           └───pablomesaspringbootfundamentals
-    │   │               └───modules
-    │   │                   ├───album
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───artist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───genre
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   ├───playlist
-    │   │                   │   ├───controller
-    │   │                   │   ├───dto
-    │   │                   │   ├───entity
-    │   │                   │   ├───mapper
-    │   │                   │   ├───repository
-    │   │                   │   └───service
-    │   │                   └───song
-    │   │                       ├───controller
-    │   │                       ├───dto
-    │   │                       ├───entity
-    │   │                       ├───mapper
-    │   │                       ├───repository
-    │   │                       └───service
-    │   └───resources
-    └───test
-        └───java
-            └───com
-                └───example
-                    └───pablomesaspringbootfundamentals
-```
+   ├───main
+   │   ├───java
+   │   │   └───com
+   │   │       └───example
+   │   │           └───pablomesaspringbootfundamentals
+   │   │               ├───config
+   │   │               ├───exception
+   │   │               └───modules
+   │   │                   ├───album
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───artist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───genre
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   ├───playlist
+   │   │                   │   ├───controller
+   │   │                   │   ├───dto
+   │   │                   │   ├───entity
+   │   │                   │   ├───mapper
+   │   │                   │   ├───repository
+   │   │                   │   └───service
+   │   │                   │       └───impl
+   │   │                   └───song
+   │   │                       ├───controller
+   │   │                       ├───dto
+   │   │                       ├───entity
+   │   │                       ├───mapper
+   │   │                       ├───repository
+   │   │                       └───service
+   │   │                           └───impl
+   │   └───resources
+   └───test
+       └───java
+           └───com
+               └───example
+                   └───pablomesaspringbootfundamentals
+   ```
+
 
 ## Technologies Used
 
@@ -79,6 +86,44 @@ includes the following modules:
 - **Lombok 1.18.34**
 - **MapStruct 1.5.5.Final**
 - **Swagger 2.6.0**
+
+## Entity-Relationship Diagram (ERD) ![Mermaid](https://img.shields.io/badge/Mermaid-white?logo=mermaid)
+
+```mermaid
+erDiagram
+    GENRE ||--o{ ARTIST : "has"
+    ARTIST ||--o{ ALBUM : "creates"
+    ALBUM ||--o{ SONG : "contains"
+    SONG }o--o{ PLAYLIST : "belongs to"
+    
+    GENRE {
+        Long id PK
+        String name
+        String description
+    }
+    ARTIST {
+        Long id PK
+        String name
+        Long genre_id FK
+    }
+    ALBUM {
+        Long id PK
+        String name
+        LocalDate releaseDate
+        Long artist_id FK
+    }
+    SONG {
+        Long id PK
+        String name
+        Duration duration
+        Long album_id FK
+    }
+    PLAYLIST {
+        Long id PK
+        String name
+        String description
+    }
+```
 
 ## Getting Started
 
