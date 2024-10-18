@@ -33,6 +33,6 @@ public class Song {
     @JoinColumn(name = "album_id")
     private Album album;
 
-    @ManyToMany(mappedBy = "songs")
+    @ManyToMany(mappedBy = "songs", cascade = CascadeType.REMOVE)
     private List<Playlist> playlists;
 }
