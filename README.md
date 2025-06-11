@@ -181,6 +181,21 @@ For any inquiries or feedback, please contact:
 
 Pablo José Mesa Pérez
 
-[pablo.mesa@nter.es](mailto:)
+[pablomesa@outlook.es](mailto:)
 
-[Nter](https://www.nter.es)
+## License
+
+Custom Attribution License
+
+Copyright (c) 2024 Pablo José Mesa Pérez
+
+Permission is granted to use, copy, modify, and distribute this software and its documentation, provided that:
+
+1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the software.
+
+2. Any use, reproduction, or distribution of the software, in its original or modified form, must include clear and visible attribution to Pablo José Mesa Pérez as the original author and creator of this content.
+
+3. The name of Pablo José Mesa Pérez may not be used to endorse or promote products derived from this software without specific prior written permission.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
